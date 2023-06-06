@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GREET USER</title>
+    </head>
+    <body>
+        <button onclick="greetUser()">Wish You</button>
+    </body>
+    <script>
+        function greetUser(){
+            var currentDate = new Date();
+            var curr_hour = currentDate.getHours();
+            console.log(curr_hour);
+            if(curr_hour >= 5 && curr_hour<12 ){
+                alert("Good Morning! Have a nice Day");
+            }
+            else if(curr_hour >= 12 && curr_hour<17){
+                alert("Good Afternoon!!");
+            }
+            else if(curr_hour >= 17 && curr_hour<23){
+                alert("Good Evening!!");
+            }
+            else{
+                alert("Good Night!! Sweet Dreams");
+            }
+        }
+    </script>
+</html>

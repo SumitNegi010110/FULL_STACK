@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM VALIDATION</title>
+        <style>
+            form{
+                display: flex;
+                padding: 10px;
+                border: 2px solid black;
+                width: 400px;
+                height: 300px;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .div1{
+                display: flex;
+                justify-content: center;
+            }
+            .div2{
+                display: flex;
+                flex-direction: column;
+            }
+            .div3{
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+                margin: 2px;
+            }
+            label{
+                margin-right: 10px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="div1">
+            <form name="form1" action="#" onsubmit="validationOfUserinfo()">
+                <div class="div2">
+                    <h1>User Information</h1>
+                    <div class="div3">
+                        <label>Name</label>
+                        <input id="name" type="text" name="text1" />
+                    </div>
+                    <div class="div3">
+                        <label>Password</label>
+                        <input id="password" type="password" name="passwd1" />
+                    </div>
+                    <div class="div3">
+                        <label>Email</label>
+                        <input id = "email" type ="email" name = "email" />
+                    </div>
+                </div>
+                <input type="submit" value="submit"/>
+            </form>
+        </div>
+    </body>
+    <script src="form.js">
+    </script>
+</html>

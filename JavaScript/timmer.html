@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            TIMEOUT & INTERVAL
+        </title>
+    </head>
+    <body>
+        <input type= "number" id = "ip_box">
+        <button onclick = "setTimer()">Set Timer</button>
+        <button onclick = "startTimer()">Start Timer</button>
+        <button onclick = "stopTimer()">Stop Timer</button>
+        <button onclick = "resetTimer()">Reset</button>
+    </body>
+    <script>
+
+        let cnt=0;
+        var time;
+        function resetTimer(){
+            cnt = 0;
+            document.getElementById("ip_box").value = cnt;
+        }
+        function setTimer(){
+            cnt = document.getElementById("ip_box").value;
+        }
+        function startTimer(){
+            document.getElementById("ip_box").value = cnt;
+            time = setInterval(myfun, 1000);
+        }
+
+        function myfun(){
+            if(cnt == 0){
+                document.getElementById("ip_box").value = "Done";
+                clearInterval(time);
+            }
+            else
+                document.getElementById("ip_box").value = cnt;
+            cnt--;
+        }
+
+        function stopTimer(){
+            clearInterval(time);
+        }
+    </script>
+</html>
